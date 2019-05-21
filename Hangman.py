@@ -61,13 +61,12 @@ def display_board(missed_letters, correct_letters, secret_word):
     print(HANGMAN_PICS[len(missed_letters)])
     print()
 
-    print('Missed letters:', end=' ')
+    print('Missed letters:', end='')
     for letter in missed_letters:
         print(letter, end=' ')
     print()
 
-    blanks = '-' * len(secret_word) 
-
+    blanks = '-' * len(secret_word)
     for i in range(len(secret_word)):
          if secret_word[i] in correct_letters:
             blanks = blanks[:i] + secret_word[i] + blanks[i + 1:]
